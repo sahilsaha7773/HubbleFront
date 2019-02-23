@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="HandheldFriendly" content="true">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @media screen and (max-width: 940px){
+      .landingContent {
+        flex-direction: column;
+      }
+      .landingLeft {
+        text-align: center;
+      }
+      .landingImg {
+        max-width: 40%;
+        margin-left: 25%;
+        margin-top: 40px; 
+      }
+      .featureContent {
+        flex-direction: column-reverse;
+      }
+      .featureContent2 {
+        flex-direction: column;
+      }
+      .ft3 {
+        flex-direction: column-reverse;
+      }
+      #grey {
+        text-align: center;
+      }
+      #grow, #conv {
+        max-width: 70%;
+        margin: 25px 70px  !important;
+      }
+    }
+     @media screen and (max-width: 375px){
+      .logo {
+        width: 90px;
+      }
+      #trialbtn {
+        width: 70px !important;
+        height: 20px !important;
+        font-size: 10px;
+       }
+      h1 {
+        font-size: 20px !important;
+      }
+      .landingContent {
+        margin: 10%;
+      }
+      .landingLeft {
+        margin: 0 !important;
+      }
+      .landingImg {
+        max-width: 90%;
+        margin-left: 7% !important;
+      }
+     }
+      }
+      }
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+   s .attribution a { color: hsl(228, 45%, 44%); }
+    .landing {
+      background-image: url(images/bg-hero-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 100%;
+      overflow-y: hidden;
+      min-height: 600px;
+    }
+    p {
+      font-size: 18px;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .trial {
+      float: right;
+      margin: 40px;
+    }
+    .logo {
+      margin: 40px;
+    }
+    .landingContent {
+      display: flex;
+      margin-left: 40px;
+    }
+    .landingLeft {
+      margin-top: 100px;
+      margin-right: 50px;
+    }
+    .landingImg {
+      width: 95%;
+    }
+    #trialbtn {
+      background-color: white;
+      width: 120px;
+      height: 40px;
+      border-radius: 100px;
+      box-shadow: 2px 2px 30px gray;
+    }
+    .pink {
+      background-color: hsl(322, 100%, 66%);
+      margin-top: 20px;
+      width: 200px;
+      height: 40px;
+      border-radius: 100px;
+    }
+    .ptext {
+      color: white;
+    }
+    .featureContent {
+      display: flex;
+      margin-top: 100px; 
+      margin-right: 20px;
+      margin-left: 20px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 30px gray;
+    }
+    .singleFeature {
+      margin: 20px;
+
+    }
+    #grow {
+      width: 70%;
+      margin: 25px;
+    }
+    h2{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .leftContent {
+      margin-top: 100px;
+      margin-left: 90px;
+      margin-right: 90px;
+    }
+    #grey {
+      color: grey;
+    }
+    .featureContent2 {
+      display: flex;
+      margin-top: 40px; 
+      margin-right: 20px;
+      margin-left: 20px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 30px gray;
+    }
+    #conv {
+      width: 70%;
+      margin: 40px;
+    }
+    html { font-size:100%; }
+    .pro {
+      margin-right: 25%;
+      margin-left: 25%;
+      margin-top: 100px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 30px gray;
+    }
+    #foop{
+      padding-top: 40px;
+      padding-right: ;
+      padding-left: 25%;
+    }
+    .c {
+      margin-left: 10%;
+      margin-left: 35%;
+      margin-bottom: 30px;
+    }
+    footer {
+      background-color: hsl(192, 100%, 9%);
+      display: flex;
+      position: absolute;
+    }
+    .left {
+      padding-top: 50px;
+    }
+    #white {
+      color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="primary">
+    <div class="section">
+      <div class="landing">
+        <div class="landingWrapper">
+          <div class="nav">
+            <a href="#"><img class="logo" src="images/logo.svg"></a>
+            <div class="trial">
+              <button id="trialbtn" href="#"><strong>Try It free</strong></button>
+            </div>
+          </div>
+          <div class="landingContent">
+            <div class="landingLeft">
+              <h1>Build The Community Your Fans Will Love</h1>
+              <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+                  Create connections with your users as you engage in genuine discussion.</p> 
+
+                  <button class="pink"><span class="ptext">Get Started For Free</span></button>
+            </div>
+            <div class="landingRight">
+              <img class="landingImg" src="images/illustration-mockups.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="features">
+      <div class="singleFeature">
+        <div class="featureContent">
+          <div class="leftContent">
+            <h2>Grow Together</h2>
+            <p id="grey">Generate meaningful discussions with your audience and build a strong, loyal community. 
+            Think of the insightful conversations you miss out on with a feedback form.</p>
+          </div>
+          <div class="rightContent">
+            <img id="grow" src="images/illustration-grow-together.svg">
+          </div>
+        </div>
+      </div>
+    
+    <div class="singleFeature">
+        <div class="featureContent2">
+          <div class="rightContent">
+            <img id="conv" src="images/illustration-flowing-conversation.svg">
+          </div>
+          <div class="leftContent">
+            <h2>Flowing Conversations</h2>
+             <p id="grey">You wouldn't paginate a conversation in real life, so why do it online? Our threads 
+             have just-in-time loading for a more natural flow.</p>
+          </div>
+        </div>
+      </div>
+      <div class="singleFeature">
+        <div class="featureContent2 ft3">
+          <div class="leftContent">
+            <h2>Your Users</h2>
+            <p id="grey">It takes no time at all to integrate Huddle with your app's authentication solution. 
+            This means, once signed in to your app, your users can start chatting immediately.</p>
+          </div>
+          <div class="rightContent">
+            <img id="grow" src="images/illustration-your-users.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="pro">
+        <h2 id="foop">Ready To Build Your Community?</h2>
+        <button class="pink c"><span class="ptext">Get Started For Free</span></button>
+      </div>
+      <footer>
+        <div class="left">
+          <img src="images/logo.svg">
+          <p id="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua</p>
+          <p id="white">+1-543-123-4567<br><br>
+          example@huddle.com</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+      
+    
+  <!-- Build The Community Your Fans Will Love
+
+  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+  Create connections with your users as you engage in genuine discussion. 
+
+  Get Started For Free
+
+  Grow Together
+
+  Generate meaningful discussions with your audience and build a strong, loyal community. 
+  Think of the insightful conversations you miss out on with a feedback form. 
+
+  Flowing Conversations
+
+  You wouldn't paginate a conversation in real life, so why do it online? Our threads 
+  have just-in-time loading for a more natural flow.
+
+  Your Users
+
+  It takes no time at all to integrate Huddle with your app's authentication solution. 
+  This means, once signed in to your app, your users can start chatting immediately.
+
+  Ready To Build Your Community?
+
+  Get Started For Free
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+  incididunt ut labore et dolore magna aliqua
+
+  +1-543-123-4567
+  example@huddle.com
+
+  About Us
+  What We Do
+  FAQ
+
+  Career
+  Blog
+  Contact Us
+ -->
+  &copy; Copyright 2018 Huddle. All rights reserved.
+  <div>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </div>
+</body>
+</html>
